@@ -12,45 +12,10 @@ import android.widget.Button;
 import java.util.TimerTask;
 
 public class MainActivity extends AppCompatActivity {
-
-    private String sss;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
-
-        SureDialog();
-
-    }
-
-    public void SureDialog(){
-        final AlertDialog builder = new AlertDialog.Builder(MainActivity.this)
-                .create();
-
-     //设置弹出框加载的布局
-
-        builder.show();
-        Window window = builder.getWindow();
-        window.setContentView(R.layout.dialog);
-
-        Button btSure = (Button) window.findViewById(R.id.btSure);
-        Button btCancle = (Button) window.findViewById(R.id.btCancle);
-
-        btSure.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //打印
-
-            }
-        });
-
-        btCancle.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                builder.dismiss();
-            }
-        });
     }
 }
